@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Countdown from 'react-countdown-now';
 import './App.css';
 
+const dayToMs = () => 24*60*60*1000;
+
 const Completionist = () => <span>You're all out of time :)</span>;
 
 // Renderer callback with condition
@@ -19,7 +21,7 @@ class App extends Component {
   render() {
     const url = new URL(window.location.href);
     const urlDate = url.searchParams.get("date");
-    const date = new Date(urlDate);
+    const date = new Date(urlDate || Date.now() + dayToMs());
 
     const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
     const dateWithLocale = date.toLocaleDateString('en-AU', options);
@@ -33,7 +35,7 @@ class App extends Component {
           />
         </div>
         <div className="subtext">
-          <span>Time until {dateWithLocale}</span>
+          <span>Time until {urlDate ? '(Midday) ' : ''}{dateWithLocale}</span>
         </div>
       </div>
     );
