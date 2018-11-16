@@ -26,16 +26,14 @@ class App extends Component {
 
     return (
       <div className="main">
-        <div className="heroText">
-          <div className="timer">
-            <Countdown
-              date={date}
-              renderer={renderer}
-            />
-          </div>
-          <div className="subtext">
-            <span>Time until {dateWithLocale}</span>
-          </div>
+        <div className="timer">
+          <Countdown
+            date={date}
+            renderer={renderer}
+          />
+        </div>
+        <div className="subtext">
+          <span>Time until {dateWithLocale}</span>
         </div>
       </div>
     );
