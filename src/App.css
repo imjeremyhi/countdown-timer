@@ -10,11 +10,18 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  font-family: 'Roboto', sans-serif;
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
+}
+
+.datePicker {
+  position: absolute;
+  top: 0;
+  margin: 5% 0% 0% 0%;
 }
 
 .timer {
@@ -26,4 +33,13 @@
   margin-top: 30px;
   color: white;
   font-size: 2vw;
+}
+
+input, textarea {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.50);
+  border-color: rgba(0, 0, 0, 0.50);
+  color: white;
+  padding: 5px;
+  font-size: 1vw;
 }

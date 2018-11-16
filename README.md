@@ -3,9 +3,14 @@ To serve as a reminder that time is always ticking
 
 >*"So live as if you were living already for the second time and as if you had acted the first time as wrongly as you are about to act now!"* ― Viktor E. Frankl, Man's Search for Meaning
 
-# URL format
+# URL
 ```
-https://countdown-timer-unique.firebaseapp.com/?date=<YYYY-MM-DD>
+https://countdown-timer-unique.firebaseapp.com
+```
+
+# Query parameters
+```
+date=<YYYY-MM-DD>
 ```
 
 # Why did you really build this
