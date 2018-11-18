@@ -21,7 +21,13 @@ class Timer extends Component {
 
         const url = new URL(window.location.href);
         const urlDate = url.searchParams.get("date");
-        const date = urlDate ? moment(urlDate) : moment().add(1, 'hour');
+        const storedDate = window.localStorage.getItem('date');
+
+        const date = urlDate ? moment(urlDate) : (
+            storedDate ? 
+                moment(storedDate) :
+                moment().add(1, 'hour')
+            );
 
         props.setDate(date);
     }
