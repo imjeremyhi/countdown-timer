@@ -13,6 +13,13 @@ https://countdown-timer-unique.firebaseapp.com
 date=<YYYY-MM-DD>
 ```
 
+# Note
+Because this uses firebase use node version 10:
+
+```bash
+nvm use 10
+```
+
 # Why did you really build this
 To play with new technologies:
 * react-create-app
