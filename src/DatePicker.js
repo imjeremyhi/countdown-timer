@@ -2,14 +2,19 @@ import React, { Component } from 'react';
 import DatePicker from 'react-datepicker';
 import styled from 'styled-components';
 
-const DateWrapper = styled.div`
-    padding: 25px;
+const DateContainer = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 20%;
+    position: absolute;
+    width: 100%;
 `;
 
 class CustomDatePicker extends Component {
     render() {
         return (
-            <DateWrapper>
+            <DateContainer>
                 <DatePicker 
                     selected={this.props.date}
                     onChange={this.props.setDate}
@@ -19,7 +24,7 @@ class CustomDatePicker extends Component {
                     dateFormat="DD-MMM-YYYY   HH:mm a"
                     placeholderText="Click to select a date" 
                 />
-            </DateWrapper>
+            </DateContainer>
         )
     }
 }

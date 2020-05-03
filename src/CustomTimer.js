@@ -3,7 +3,12 @@ import styled from 'styled-components';
 
 const TimerText = styled.div`
     color: white;
-    font-size: 4vh;
+    font-size: 4vmax;
+    top: 40%;
+    position: absolute;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
 `;
 
 export default ({ date, firstLoad }) => {

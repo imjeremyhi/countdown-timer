@@ -19,19 +19,7 @@ const HeroWrapper = styled.div`
     right: 0;
     bottom: 0;
     left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-`;
-
-const Content = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
     text-align: center;
-    font-family: 'Roboto', sans-serif;
 `;
 
 class App extends Component {    
@@ -70,10 +58,8 @@ class App extends Component {
 
         return (
             <HeroWrapper>
-                <Content>
-                    <CustomDatePicker date={date} setDate={this.setDate} />
-                    <Timer date={date} firstLoad={firstLoad} />
-                </Content>
+                <CustomDatePicker date={date} setDate={this.setDate} />
+                <Timer date={date} firstLoad={firstLoad} />
                 <SignIn date={date} setDate={this.setDate} />
             </HeroWrapper>
         );
